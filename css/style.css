@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #a1c3ff;
+    font-family: "Poppins", sans-serif;
+}
+
+.container{
+    max-width: 1100px;
+    width: 90%;
+    margin: 0 auto;
+    min-height: 400px;
+    height: auto;
+}
+
+#navbar{
+    height: 80px;
+    width: 100%;
+    background-color: rgb(34, 103, 251);
+    color: #fff;
+}
+
+.nav-section{
+    max-width: 1100px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+#navbar .nav-section{
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    align-items: center;
+}
+
+#navbar h1:hover{
+   background-color: #062981;
+   border-radius: 5px;
+   padding: 0 10px;
+}
+
+
+#navbar ul{
+    display: flex;
+    list-style-type: none;
+    flex-wrap: wrap;
+}
+
+#navbar ul li{
+    display: inline-block;
+    margin-left: 30px;
+    font-weight:bolder;
+}
+
+#navbar ul li:hover{
+   background-color: #062981;
+   border-radius: 5px;
+   padding: 0 5px;
+}
+
+#navbar a{
+   color: #fff;
+}
+
+#hero{
+    background-color: #0522c1;
+}
+
+#hero .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#hero h1{
+    color: #daff06; 
+}
+
+
+#hero marquee{
+    color: #f9f504; 
+}
+
+#hero .hero-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+    flex: 1;
+    min-width: 300px;
+}
+
+
+#hero .hero-content:hover{
+   background-color: #2181ff;
+   border-radius: 20px;
+}
+
+#hero .hero-content a{
+   color: #fff;
+   text-decoration: none;
+}
+
+#hero .hero-content p{
+    display: flex;
+    width: auto;
+    color: #fff;
+}
+
+
+#hero .hero-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    min-width: 300px;
+    margin-right: 0;
+}
+
+#hero .hero-image img{
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    margin: 0 0 0 100px;
+}
+
+#boxarea{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-right: 10px;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.box{
+    flex: 1 1 300px;
+    max-width: 300px;
+    padding: 20px;
+    border: 10px;
+    border-radius: 20px;
+    background-color: #0522c1;
+}
+
+.box:hover{
+    background-color: #2181ff; 
+}
+
+.box a{
+    text-decoration: none; 
+}
+
+.box-header{
+    display: flex;
+    align-items: center;
+
+}
+
+.box-header i{
+    color: white;
+    font-size: 30px;
+    margin: 0 5px;
+}
+
+.box-header h3{
+    margin: 0;
+    font-size: 22px;
+    color: #daff06;
+}
+
+.box p{
+    margin: 0;
+    line-height: 1.6;
+    color: #fff;
+}
+
+This produces:
+
+[🡺] Alignment & Spaces
+     A more efficient way to layout,
+     align, and distribute spaces...
+
+[✚] Tricky Position
+     A more efficient way to layout...
+Option 2 (Without changing your HTML)
+
+You can make the entire .box a flex container with wrapping:
+
+.box{
+    display: flex;
+    align-items: center;
+}
+
+.box img{
+    width: 20px;
+    height: 20px;
+}
+
+.box h3{
+    margin: 0;
+}
+
+.box p{
+    width: 100%;
+    margin-top: 10px;
+}
+
+.flex-container{
+    background-color: #cac8c8;
+    display: flex;
+    flex-direction: row;
+    justify-content:start;
+    min-height: 400px;
+    align-items: center;
+    /* flex-wrap: wrap; */
+}
+
+.flex-container :hover{
+    background-color: #2181ff;
+}
+
+.item{
+    background-color: blue;
+    flex-basis: 300px;
+    /* flex-grow: 1; */
+    height: 70px;
+    margin: 10px;
+    color: #fff;
+}
+
+.item:nth-of-type(2){
+    /* flex-grow: 2; */
+    flex-shrink: 2;
+}
+.item:nth-of-type(1){
+    flex-grow: 3;
+}
+.item:nth-of-type(3){
+    flex-grow: 4;
+}
+
+/* ==========================
+   Mobile Responsive Design
+========================== */
+
+@media (max-width:768px){
+
+    #navbar{
+        height: auto;
+        padding: 15px 0;
+    }
+
+    #navbar .nav-section{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #navbar ul{
+        flex-direction: column;
+        margin-top: 15px;
+    }
+
+    #navbar ul li{
+        margin: 10px 0;
+    }
+
+    #hero .container{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #hero .hero-content{
+        order: 2;
+        padding: 20px;
+    }
+
+    #hero .hero-image{
+        order: 1;
+        margin-bottom: 20px;
+    }
+
+    #boxarea{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .box{
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .flex-container{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .item{
+        width: 90%;
+        flex-basis: auto;
+    }
+}
